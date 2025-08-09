@@ -13,7 +13,7 @@ const Navbar = () => {
       height: '100vh',
     };
   return (
-    <div style={backgroundStyle} className=" flex flex-col md:flex-row bg-[#000222] items-start  overflow-hidden w-full h-screen mx-auto font-sans text-white">
+    <div style={backgroundStyle} className="fixed z-50 inset-y-40 flex flex-col md:flex-row bg-[#000222] items-start  overflow-hidden w-full h-screen mx-auto font-sans text-white">
       <div className="hidden md:flex flex-col justify-center p-8 md:p-12 space-y-5 md:w-[600px] w-full  bg-opacity-20 text-gray-300">
         <h2 className="text-2xl font-bold mt-3  mb-6">Contact Us</h2>
         <p className="text-xl">Calgary, Ab</p>
