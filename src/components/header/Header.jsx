@@ -7,9 +7,9 @@ const Header = () => {
     const [showNav, setShowNav] = useState(false)
   return (
     <>
-    <div className={`${showNav ? 'fixed z-50 w-full': 'static' } flex justify-between p-[50px] bg-[#000222]`}>
+    <div className={`${showNav ? 'fixed inset-0 z-50 w-full': 'static' } flex justify-between p-[50px] bg-[#000222]`}>
         <div id="logo" className='w-[200px]'>
-            <img src={assets.logo} alt="" />
+            <img src={assets.logo} alt="logo" />
         </div>
         <div id='menu'>
             <Menu 

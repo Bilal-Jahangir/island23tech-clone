@@ -13,9 +13,9 @@ const Navbar = () => {
       height: '100vh',
     };
   return (
-    <div style={backgroundStyle} className="fixed z-50 inset-y-40 flex flex-col md:flex-row bg-[#000222] items-start  overflow-hidden w-full h-screen mx-auto font-sans text-white">
-      <div className="hidden md:flex flex-col justify-center p-8 md:p-12 space-y-5 md:w-[600px] w-full  bg-opacity-20 text-gray-300">
-        <h2 className="text-2xl font-bold mt-3  mb-6">Contact Us</h2>
+    <div style={backgroundStyle} className=" fixed z-50 inset-y-45  flex flex-col md:flex-row bg-[#000222] items-start  overflow-hidden w-full h-screen mx-auto font-sans text-white">
+      <div className="hidden md:flex flex-col  p-8 md:px-12 md:py-17 space-y-7 md:w-[600px] w-full items-start bg-opacity-20 text-white">
+        <h2 className="text-2xl font-bold">Contact Us</h2>
         <p className="text-xl">Calgary, Ab</p>
         <p className="text-xl">island23tech@gmail.com</p>
         <p className="text-xl">403-990-3875</p>
@@ -26,11 +26,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className='hidden md:block h-[400px] w-[2px] bg-blue-400'></div>
-      <div className="flex-1 flex items-center justify-center p-8 md:p-16">
+      <div className=" flex-1 flex w-full items-start md:items-center justify-between p-8 md:p-16">
         <nav className="w-full">
           <ul className="space-y-8">
             <li className="group">
-              <a href="#" className="flex items-center justify-between text-2xl md:text-3xl lg:text-4xl font-semibold text-white transition-colors duration-300 group-hover:text-blue-400">
+              <a href="#" className=" flex items-start justify-between text-2xl md:text-3xl lg:text-4xl font-semibold text-white transition-colors duration-300 group-hover:text-blue-400">
                 <span>Home</span>
                 <span className="text-blue-400 transition-transform duration-300 group-hover:translate-x-2">→</span>
               </a>
