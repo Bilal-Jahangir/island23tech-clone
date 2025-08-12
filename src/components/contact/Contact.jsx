@@ -50,10 +50,9 @@ const Contact = () => {
 
         {/* The form element */}
         <form onSubmit={handleSubmit} className="space-y-8  w-full md:w-[70%]">
-          {/* Input fields for Name, City, Phone, and Email */}
+          {/* Input fields section*/}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Name Field */}
-           
               <input
                 type="text"
                 id="name"

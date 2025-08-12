@@ -1,10 +1,10 @@
 import React from 'react'
-import { Contact, Header, Footer } from './components'
+import { Contact, Header, Footer, Home, About, Services, HowWeWork } from './components'
 const App = () => {
   return (
     <>
     <Header/>
-    <Contact/>
+    
     <Footer/>
     </>
   )
