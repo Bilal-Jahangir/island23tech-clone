@@ -64,7 +64,7 @@ const Home = () => {
     <>
     {/* section 1 starts here *************/}
 
-      <div className="relative h-screen flex pt-10 md:pt-0 items-start md:items-center justify-center text-center overflow-hidden">
+      <div className="relative h-screen z-0 flex pt-10 md:pt-0 items-start md:items-center justify-center text-center overflow-hidden">
         {/* Background Image Container */}
         <div className="absolute inset-0 z-0">
           <img
@@ -202,7 +202,6 @@ const Home = () => {
 
       {/* section 4 starts here *************/}
             <div className="bg-slate-900">
-<ParticleBg />
       <div className=" text-white px-4 py-14 md:p-25 flex flex-col items-center justify-center">
         
         <p className="font-bold text-[16px] md:text-3xl  text-center">
