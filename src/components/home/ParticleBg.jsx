@@ -87,7 +87,7 @@ const ParticleBg = () => {
           mode: 'repulse', // "grab" or "repulse" are great options.
         },
         onClick: {
-          enable: true,
+          enable: false,
           mode: 'push', // "push" or "remove" particles on click.
         },
         resize: true,
@@ -108,7 +108,7 @@ const ParticleBg = () => {
             init={particlesInit}
             loaded={particlesLoaded}
             options={options}
-            className="absolute top-0 left-0 w-full h-full"
+            className="absolute top-0 left-0 w-[100%] h-[100%]"
         />
     );
 };

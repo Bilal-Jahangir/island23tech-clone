@@ -28,6 +28,10 @@ import manufacturing from './about/Manufacturing.png'
 import nonprofit from './about/nonprofit.png'
 import publicSafety from './about/Public-Safety.png'
 import services from './about/services.png'
+import iconOne from './home/icon-1.png'
+import iconTwo from './home/icon-2.png'
+import bgS4 from './home/bg-s4.jpg'
+
 const assets = {
     logo,
     contact,
@@ -58,7 +62,10 @@ const assets = {
     manufacturing,
     nonprofit,
     publicSafety,
-    services
+    services,
+    iconOne,
+    iconTwo,
+    bgS4
     
 }
 

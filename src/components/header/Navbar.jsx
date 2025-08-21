@@ -40,7 +40,7 @@ const Navbar = () => {
             <span className="text-blue-400 transition-transform duration-300 group-hover:translate-x-2">→</span>
           </li>
           <li className={`group ${isHover? 'block' : 'hidden'} flex items-center justify-between text-lg md:text-xl  font-semibold text-white transition-colors duration-300 hover:text-blue-400`}>
-            <Link to="/about">How We Work</Link>
+            <Link to="/howWeWork">How We Work</Link>
           </li>
           <li className='flex items-center my-4 justify-between text-2xl md:text-3xl lg:text-4xl font-semibold text-white transition-colors duration-300 hover:text-blue-400 group'>
             <Link to="/services">Services</Link>
