@@ -6,14 +6,14 @@ import {
 import assets from "../../assets/assets";
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-5 md:px-20">
+    <footer className="bg-black text-white py-5 md:px-10">
       <div className="mx-auto px-4 grid grid-cols-1 md:grid-cols-2   items-center">
         {/* Logo and Contact Info Section */}
         <div className="flex flex-col space-y-1 text-center md:text-left">
           <img
             src={assets.logo}
             alt="Island 23 Technologies Logo"
-            className="h-[80px] w-[170px] m-auto md:m-4"
+            className=" w-[200px] m-auto md:my-4 md:mx-0"
           />
           <p>island23tech@gmail.com</p>
           <p>Calgary, AB</p>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { RiLinkedinFill } from '@remixicon/react';
 import assets from '../../assets/assets';
 import { Link } from 'react-router-dom';
-const Navbar = () => {
+const Navbar = ({showNav,setShowNav}) => {
   const [isHover, setIsHover] = useState(false)
    const backgroundStyle = {
       backgroundImage: `url(${assets.navbar})`,
@@ -29,24 +29,33 @@ const Navbar = () => {
       <div className=" flex-1 flex w-full items-start md:items-center justify-between p-8 md:p-16 ">
           <nav className='w-full'>
         <ul>
-          <li className='flex items-center my-4 justify-between text-2xl md:text-3xl lg:text-4xl font-semibold text-white transition-colors duration-300 hover:text-blue-400 group'>
+          <li 
+          onClick={()=>setShowNav(!showNav)}
+          className='flex items-center my-4 justify-between text-2xl md:text-3xl lg:text-4xl  text-white transition-colors duration-300 hover:text-blue-400 group'>
             <Link to="/">Home</Link>
             <span className="text-blue-400 transition-transform duration-300 group-hover:translate-x-2">→</span>
           </li>
           <li 
+          onClick={()=>setShowNav(!showNav)}
           onMouseEnter={()=>setIsHover(!isHover)}
-          className='flex items-center my-4 justify-between text-2xl md:text-3xl lg:text-4xl font-semibold text-white transition-colors duration-300 hover:text-blue-400 group'>
+          className='flex items-center my-4 justify-between text-2xl md:text-3xl lg:text-4xl  text-white transition-colors duration-300 hover:text-blue-400 group'>
             <Link to="/about">About Us</Link>
             <span className="text-blue-400 transition-transform duration-300 group-hover:translate-x-2">→</span>
           </li>
-          <li className={`group ${isHover? 'block' : 'hidden'} flex items-center justify-between text-lg md:text-xl  font-semibold text-white transition-colors duration-300 hover:text-blue-400`}>
+          <li 
+          onClick={()=>setShowNav(!showNav)}
+          className={`group ${isHover? 'block' : 'hidden'} flex items-center justify-between text-lg md:text-xl  text-white transition-colors duration-300 hover:text-blue-400`}>
             <Link to="/howWeWork">How We Work</Link>
           </li>
-          <li className='flex items-center my-4 justify-between text-2xl md:text-3xl lg:text-4xl font-semibold text-white transition-colors duration-300 hover:text-blue-400 group'>
+          <li
+          onClick={()=>setShowNav(!showNav)}
+           className='flex items-center my-4 justify-between text-2xl md:text-3xl lg:text-4xl  text-white transition-colors duration-300 hover:text-blue-400 group'>
             <Link to="/services">Services</Link>
             <span className="text-blue-400 transition-transform duration-300 group-hover:translate-x-2">→</span>
           </li>
-          <li className='flex items-center my-4 justify-between text-2xl md:text-3xl lg:text-4xl font-semibold text-white transition-colors duration-300 hover:text-blue-400 group'>
+          <li
+          onClick={()=>setShowNav(!showNav)}
+           className='flex items-center my-4 justify-between text-2xl md:text-3xl lg:text-4xl  text-white transition-colors duration-300 hover:text-blue-400 group'>
             <Link to="/contact">Contact Us</Link>
             <span className="text-blue-400 transition-transform duration-300 group-hover:translate-x-2">→</span>
           </li>

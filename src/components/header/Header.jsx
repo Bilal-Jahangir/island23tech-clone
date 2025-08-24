@@ -7,8 +7,8 @@ const Header = () => {
     const [showNav, setShowNav] = useState(false)
   return (
     <>
-    <div className={`${showNav ? 'fixed inset-0 z-50 w-full': 'static' } flex justify-between p-[50px] bg-[#000222]`}>
-        <div id="logo" className='w-[200px]'>
+    <div className={`${showNav ? 'fixed inset-0 z-50 w-full': 'static' } flex justify-between p-[20px] md:p-[40px] bg-[#000222]`}>
+        <div id="logo" className='md:w-[180px] w-[150px]'>
             <img src={assets.logo} alt="logo" />
         </div>
         <div id='menu'>
@@ -17,7 +17,10 @@ const Header = () => {
             setShowNav={setShowNav}/>
         </div>
     </div>
-            {showNav ? <Navbar/>:null}
+            {showNav ? 
+            <Navbar 
+            showNav={showNav}
+            setShowNav={setShowNav}/>:null}
     </>
     
   )

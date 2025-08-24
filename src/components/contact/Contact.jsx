@@ -15,7 +15,7 @@ const Contact = () => {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundBlendMode:'screen',
-    height: '100vh',
+    height: '80vh',
   };
   // Handle input changes
   const handleChange = (e) => {
@@ -42,9 +42,10 @@ const Contact = () => {
   return (
     <>
       {/* The form container*/}
-      <div id="contact" style={backgroundStyle}  className={`w-full px-4 md:p-15 md:px-25 bg-[#000222] text-white shadow-xl backdrop-blur-sm bg-opacity-50`}>
+      <div id="contact" style={backgroundStyle}  className={`w-full overflow-hidden px-4 md:p-15 md:px-25 bg-[#000222] text-white shadow-xl backdrop-blur-sm bg-opacity-50`}>
         {/* Page Title */}
-        <h1 className="text-xl md:text-8xl font-bold mb-5 md:mb-22 text-left">
+        <div className="w-screen md:w-[860px] mx-auto">
+        <h1 className="text-xl md:text-7xl font-bold mb-12  text-left">
           Get In Touch
         </h1>
 
@@ -61,7 +62,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Name"
                 required
-                className="bg-transparent border-b placeholder-white border-white focus:outline-none focus:border-white transition-colors duration-300 text-lg py-3"
+                className="bg-transparent border-b placeholder-white border-white focus:outline-none focus:border-white transition-colors duration-300 text-[14px] py-1"
               />
             
 
@@ -74,7 +75,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="City"
                 required
-                className="bg-transparent border-b placeholder-white border-white focus:outline-none focus:border-white transition-colors duration-300 text-lg py-3"
+                className="bg-transparent border-b placeholder-white border-white focus:outline-none focus:border-white transition-colors duration-300 text-[14px] py-1"
               />
 
             {/* Phone Field */}
@@ -87,7 +88,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Phone"
                 required
-                className="bg-transparent border-b border-white focus:outline-none focus:border-white transition-colors duration-300 text-lg  placeholder-white py-3"
+                className="bg-transparent border-b border-white focus:outline-none focus:border-white transition-colors duration-300 text-[14px]  placeholder-white py-1"
               />
 
             {/* Email Field */}
@@ -100,7 +101,7 @@ const Contact = () => {
                 onChange={handleChange}
                 placeholder="Email"
                 required
-                className="bg-transparent border-b placeholder-white border-white focus:outline-none focus:border-white transition-colors duration-300 text-lg py-3"
+                className="bg-transparent border-b placeholder-white border-white focus:outline-none focus:border-white transition-colors duration-300 text-[14px] py-1"
               />
           </div>
 
@@ -114,12 +115,12 @@ const Contact = () => {
               required
               placeholder="Message"
               rows="1"
-              className="bg-transparent border-b w-full md:w-1/2 placeholder-white border-white focus:outline-none focus:border-white transition-colors duration-300 text-lg py-3 resize-none"
+              className="bg-transparent border-b w-full md:w-1/2 placeholder-white border-white focus:outline-none focus:border-white transition-colors duration-300 text-[14px] py-1 resize-none"
             ></textarea>
         {/* Submit button */}
             <button
               type="submit"
-              className="w-full mt-10 py-2 md:mt-0 md:w-1/2 px-8 md:ml-5  text-white  text-lg rounded-full
+              className="w-50  mt-10 py-[7px] md:mt-0 md:w-1/2 md:px-8 md:ml-5  text-white  text-[14px] rounded-full
                          bg-gradient-to-r from-[#00cdff] to-[#0012fd]
                          hover:from-[#0012fd] hover:to-[#0012fd] transition-colors duration-700 ease-out
                          "
@@ -130,6 +131,7 @@ const Contact = () => {
 
           
         </form>
+      </div>
       </div>
     </>
   );

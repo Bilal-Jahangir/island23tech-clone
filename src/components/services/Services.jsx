@@ -179,16 +179,17 @@ const Services = () => {
   };
   return (
     <div className="bg-[#000222]">
-      <div className="min-h-[70vh] text-white flex items-center md:items-start justify-center p-8 md:p-16 font-sans">
-        <div className="max-w-5xl w-full">
+      {/* section 1 starts here */}
+      <div className="md:min-h-[55vh] w-screen md:w-[860px] mx-auto text-white flex items-center md:items-start justify-center p-8 md:p-0 font-sans">
+        <div className=" w-full ">
           {/* Main Heading Section */}
           <div className="mb-3">
-            <h1 className="text-[30px] sm:text-5xl md:text-7xl font-bold  tracking-tight">
-              <span className="text-cyan-400">Unlocking Excellence</span>,
+            <h1 className="text-[30px] md:text-[64px]  font-[650] leading-tight md:leading-18  tracking-tight">
+              <span className="text-cyan-400">Unlocking Excellence,</span>
               <br />
               and <span className="text-cyan-400">Elevating Success!</span>
             </h1>
-            <p className="mt-4 md:mt-6 text-[18px] md:text-[20px] text-neutral-300 max-w-5xl">
+            <p className="mt-4 text-[16px] text-[#e1f0e3] w-full">
               Your One-Stop Solution Hub: Where Innovation Meets Service
               Excellence Across a Spectrum of Business Needs!
             </p>
@@ -196,7 +197,7 @@ const Services = () => {
 
           {/* Services Heading Section */}
           <div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-400 leading-snug">
+            <h2 className="text-[26px]  md:text-[46px] font-bold text-[#008bff] leading-tight md:leading-13">
               Services to empower
               <br />
               strategic opportunities
@@ -205,15 +206,15 @@ const Services = () => {
         </div>
       </div>
       {/* ******* section 2 Starts Here ********/}
-      <div className="min-h-screen  text-white p-8 font-sans">
-        {" "}
+      <div className="min-h-screen w-[80vw] md:w-[860px] mx-auto text-white  font-sans">
+        
         {/* Adjusted background color */}
         {/* Tab Buttons */}
-        <div className="flex flex-wrap gap-4 mb-8">
+        <div className="flex flex-wrap gap-2 mb-8">
           {Object.keys(tabContent).map((tabKey) => (
             <button
               key={tabKey}
-              className={`px-6 py-2  font-semibold w-full md:w-auto
+              className={`px-3 py-2 text-[15px] font-semibold w-full md:w-auto
               ${
                 activeTab === tabKey
                   ? " text-white bg-gradient-to-r from-[#00cdff] to-[#0012fd]  shadow-lg transition-colors duration-700 ease-out" // Blue for active
@@ -226,19 +227,19 @@ const Services = () => {
           ))}
         </div>
         {/* Content Area */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center md:mt-20">
+        <div className="flex flex-col md:flex-row justify-between md:justify-start gap-6 items-center md:items-start md:mt-20">
           {/* Left Side: Icon */}
-          <div className="flex justify-center  md:justify-end">
+          <div className="flex justify-start mb-2 md:mb-0">
             <img
               src={tabContent[activeTab].image}
               alt="service image"
-              className="text-8xl text-[#2962FF] md:mr-16 w-50 md:w-100"
+              className="text-8xl text-[#2962FF]  w-45 h-45 md:h-auto md:w-95"
             />
           </div>
 
           {/* Right Side: Title and Packages */}
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#008bff]">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#008bff]">
               {tabContent[activeTab].title}
             </h2>
             {tabContent[activeTab].packages.map((pkg, index) => (
@@ -257,24 +258,24 @@ const Services = () => {
         </div>
       </div>
       {/* ******* section 3 Starts Here ********/}
-      <div className="bg-[#000222] text-white py-8 md:py-16 font-sans min-h-[50vh] flex">
-        <div className="max-w-4xl mx-auto md:pr-40">
+      <div className="bg-[#000222] text-white mx-auto w-screen md:w-[860px] font-sans min-h-[50vh] flex">
+        <div className="px-3 md:px-0">
           {/* Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
-            Discover the <span className="text-[#00c2ff]">right</span>
+          <h1 className="text-4xl  md:text-5xl font-bold  leading-tight md:leading-14 mb-2">
+            Discover the <span className="text-[#00e1ff]">right</span>
             <br />
-            <span className="text-[#00C2FF]">solution</span> for your business
+            <span className="text-[#00e1ff]">solution</span> for your business
           </h1>
 
           {/* Subtitle */}
-          <p className="text-gray-300 text-base md:text-lg mb-8 max-w-2xl">
+          <p className="text-white text-base md:text-[16px] mb-6 max-w-2xl">
             Whether you need help with a platform/business strategy, an
             in-flight project, or need a talented consultant to bridge critical
             gaps, ISLAND 23 TECHNOLOGIES is here to help
           </p>
 
           {/* Call-to-action button */}
-          <button className="  px-3 md:px-10 py-2 md:py-4 text-[12px] font-semibold md:text-[16px] text-white bg-gradient-to-r from-[#00cdff] to-[#0012fd] rounded-full shadow-lg hover:from-[#0012fd] hover:to-[#0012fd] transition-colors duration-700 ease-out">
+          <button className="mt-0 px-5 md:px-7 py-2 md:py-3 font-semibold  text-[14px]  text-white bg-gradient-to-r from-[#00cdff] to-[#0012fd] rounded-full shadow-lg hover:from-[#0012fd] hover:to-[#0012fd] transition-colors duration-700 ease-out">
             GET STARTED
           </button>
         </div>
