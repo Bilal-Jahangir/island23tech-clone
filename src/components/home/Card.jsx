@@ -2,6 +2,7 @@ import { LucideArrowRight } from "lucide-react";
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const Card = ({ imageUrl, title,time}) => {
   const [isHover, setIsHover] = useState(false);
@@ -36,6 +37,7 @@ const Card = ({ imageUrl, title,time}) => {
       <div className="relative z-10 flex  items-end justify-center w-full h-full p-6 text-center">
         <h2 className="text-[23px]  text-white  ">
           {title}
+          <Link to="/howWeWork">
           <div className="flex justify-center items-center">
             <div
               className={`bg-slate-900 p-2 rounded-full ${
@@ -45,6 +47,7 @@ const Card = ({ imageUrl, title,time}) => {
               <LucideArrowRight />
             </div>
           </div>
+          </Link>
         </h2>
       </div>
     </div>

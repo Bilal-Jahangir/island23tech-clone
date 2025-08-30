@@ -2,6 +2,8 @@
 import logo from "./logo/logo.png";
 import contact from "./contact/contact-bg.jpg";
 import navbar from "./logo/navbar-bg.jpg";
+import menu from "./logo/menu.png"
+import menuCross from "./logo/cross.png"
 // services component
 import serviceOne from "./services/services-1.png";
 import serviceTwo from "./services/services-2.png";
@@ -81,7 +83,9 @@ const assets = {
   bgS4,
   chat,
   cross,
-  banner
+  banner,
+  menu,
+  menuCross
 };
 
 export default assets;

@@ -17,3 +17,6 @@ body{
 .inter-font{
     font-family: inter;
 }
+.bold-arrow {
+  stroke-width: 3px;
+}

@@ -62,6 +62,7 @@ const about = () => {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     height: "30vh",
+    width:'100%',
     opacity: 0.8,
   };
 
@@ -126,19 +127,20 @@ const about = () => {
 
   return (
     <>
-      <div className="bg-[#000222] overflow-hidden flex items-start flex-col justify-center px-3 md:px-0 leading-tight">
+      <div className="bg-[#000222] mt-[-180px] overflow-hidden w-[100%] flex items-start  flex-col justify-center px-3 md:px-0 leading-tight">
+        <div className="md:h-[35vh] h-[25vh]"></div>
         {/* section 1 ************** */}
-        <div className="flex  justify-center  min-h-[55vh] w-full md:w-[860px] mx-auto  text-white">
-          <div className="  flex flex-col lg:flex-row  justify-between gap-9">
-            <div className="text-left space-y-4">
-              <h1 className="text-3xl sm:text-3xl lg:text-[58px] font-[700] leading-tight">
+        <div className="flex  justify-center  min-h-[55vh] w-full md:w-[860px] mx-auto   text-white">
+          <div className="  flex flex-col lg:flex-row  justify-between gap-9 ">
+            <div className="text-left space-y-4 ">
+              <h1 className="text-3xl sm:text-3xl lg:text-[58px] font-[700] leading-tight ">
                 <span className="text-[#00e1ff]">
                   Elevate Your Business <span className="text-white">to</span>
                 </span>
                 <br />
                 New Heights with Our Innovative Solutions! partner
               </h1>
-              <p className=" text-left text-[16px] font-[550] text-gray-300 max-w-3xl mx-auto lg:mx-0">
+              <p className=" text-left text-[16px] font-[550]  text-gray-300 max-w-3xl mx-auto lg:mx-0 ">
                 Welcome to ISLAND 23 TECHNOLOGIES, your gateway to a seamless
                 digital experience! Our diverse range of services includes
                 cutting-edge web development, dynamic app creation, captivating
@@ -153,11 +155,11 @@ const about = () => {
         </div>
         {/* section 2 ******************** */}
         <div className="flex min-h-[60vh]  w-full md:w-[860px]  mx-auto pt-5  text-white">
-          <div className="w-full">
-            <h2 className="text-2xl sm:text-[40px] font-bold  leading-tight mb-9 ">
+          <div className="w-full ">
+            <h2 className="text-2xl  sm:text-[40px] font-bold  leading-tight mb-9 ">
               <span className="text-[#008bff]">Key Facts</span> About Us
             </h2>
-            <div className="grid  grid-cols-1  inter-font  sm:grid-cols-2 lg:grid-cols-3 gap-12 md:text-left text-center">
+            <div className="grid  grid-cols-1  inter-font  sm:grid-cols-2 lg:grid-cols-3 gap-12 md:text-left text-center ">
               <Counter
                 finalNumber={2024}
                 sym=" "
@@ -181,15 +183,15 @@ const about = () => {
         </div>
         {/* section 3 ****************** */}
         <div className=" min-h-[40vh]  w-full pt-5 md:pt-0 md:w-[860px] mx-auto border-white pb-7">
-          <h1 className="text-2xl  md:text-[40px] text-white  font-bold mb-4 text-left">
+          <h1 className="text-2xl   md:text-[40px] text-white  font-bold mb-4 text-left">
             Why work with us
           </h1>
-          <div className="border-b border-white py-1 max-w-screen"></div>
-          <div className="space-y-2">
+          <div className="border-b border-white py-1 max-w-screen "></div>
+          <div className="space-y-2 ">
             {services.map((service) => (
               <div
                 key={service.id}
-                className="border-b border-white max-w-screen py-3 "
+                className="border-b border-white max-w-screen py-3"
               >
                 <button
                   className="flex cursor-pointer  items-center justify-start w-full text-center"
@@ -201,18 +203,24 @@ const about = () => {
                     </h2>
                   </div>
                   <LucideArrowDown
-                    className={`w-4 md:w-6 h-4 md:h-6 transform transition-transform text-white   duration-300 ${
-                      openServiceId === service.id ? "rotate-180" : "rotate-0"
-                    }`}
+                    className={`w-5 h-5 stroke-[5px] text-white`}
                   />
                 </button>
-                {openServiceId === service.id && (
-                  <p className="mt-4 text-white w-full text-justify font-semibold text-[14px] px-2 transition-all duration-300 ease-in-out">
-                    {service.description}
-                  </p>
-                )}
+                 <div
+                className={`
+                  transition-all duration-1500  overflow-hidden
+                  ${openServiceId === service.id
+                    ? 'max-h-96 ' // Visible state
+                    : 'max-h-0 ' // Hidden state
+                  }
+                `}
+              >
+                <p className="text-gray-200 text-justify text-[14px] px-2 font-semibold">
+                  {service.description}
+                </p>
               </div>
-            ))}
+            </div>
+          ))}
           </div>
         </div>
         {/* section 4************** */}

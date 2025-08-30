@@ -45,10 +45,11 @@ const Home = () => {
         "Fuel your online success with Island 23 Technologies, your gateway to unparalleled SEO and Digital Marketing expertise. Our team navigates the ever-evolving digital landscape, optimizing your online presence to soar through search engine ranks. From strategic SEO campaigns to targeted digital marketing solutions, we ensure your brand shines brightly in the digital realm. Let us drive your success through the power of visibility and engagement, transforming clicks into customers and prospects into loyal advocates.",
     },
   ];
+  const [isVisible, setIsVisible] = useState(false)
   const [openServiceId, setOpenServiceId] = useState(null);
-  const [isEnquiry, setIsEnquiry] = useState(false);
   const toggleOpen = (id) => {
     setOpenServiceId(openServiceId === id ? null : id);
+    setIsVisible(!isVisible)
   };
   useEffect(() => {
     AOS.init({ duration: 1500, once: true });
@@ -63,34 +64,11 @@ const Home = () => {
 
   return (
     <>
-      {/* Make an enquiry button*************/}
-        
-      {isEnquiry ? (
-        <button 
-        onClick={() => setIsEnquiry(!isEnquiry)}
-        className="fixed bottom-5 right-5 flex items-center transition-all duration-700 ease-in-out justify-between  z-50  px-3  py-3 rounded-full">
-          <span className="bg-[#ffffff] p-1 rounded-full ml-2">
-            <img src={assets.cross} alt="chat" className="h-7 w-7 p-1 " />
-          </span>
-        </button>
-
-      ) : (
-        <button
-          onClick={() => setIsEnquiry(!isEnquiry)}
-          className={`${isEnquiry ? 'w-0' : 'w-39'} whitespace-nowrap  transition-all duration-700 ease-in-out fixed bottom-5 right-5 flex items-center justify-between
-            z-50  px-3  py-3  bg-gradient-to-r from-[#00aaff] to-40% bg-[#0211d9] rounded-full`}
-        >
-          <span className="z-50 text-[11px]  text-white">Make An Enquiry</span>
-          <span className="bg-[#ffffff] p-1 rounded-full ml-2">
-            <img src={assets.chat} alt="chat" className="h-5 w-5 " />
-          </span>
-        </button>
-      )}
-
+   
       {/* section 1 starts here *************/}
 
-      <div className="relative h-[75vh] md:h-screen z-0 flex pt-10 md:pt-0 items-start md:items-center justify-center text-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+      <div className="relative h-[85vh] mt-[-180px] md:h-[110vh]  flex pt-10 md:pt-25 items-start md:items-center justify-center text-center overflow-hidden">
+        <div className="absolute inset-0 z-0 ">
           <img
             src={assets.homeOne}
             alt="Futuristic digital globe"
@@ -103,11 +81,11 @@ const Home = () => {
         </div>
 
         {/* Content Container (Text and Button) */}
-        <div className="relative z-10 p-6 sm:p-8 md:p-12 lg:p-64 flex flex-col items-center justify-center space-y-6">
+        <div className=" z-10 p-6 sm:p-8 md:p-12 lg:p-64 mt-[80px] md:mt-0 flex flex-col items-center  justify-center  space-y-6">
           {/* Main Title */}
           <h1
             data-aos="slide-right"
-            className="text-white  px-5 font-bold text-2xl sm:text-5xl md:text-[56px] leading- tracking- drop-shadow-md"
+            className="text-white  px-5 font-bold text-2xl sm:text-5xl md:text-[58px] leading- tracking- drop-shadow-md"
           >
             Elevate Your Experience with Our Multifaceted Services Where
             Innovation Meets Quality!
@@ -116,7 +94,8 @@ const Home = () => {
           {/* Subheading */}
           <p
             data-aos="fade-up"
-            className="text-white text-[16px]  md:text-[18px] font-medium max-w-2xl  drop-shadow-sm"
+             data-aos-delay='1500'
+            className="text-white  md:text-[100%] w-[80%]  font-[400]  drop-shadow-sm"
           >
             Transforming Visions into Reality: Your One-Stop Hub for Diverse
             Services and Unparalleled Excellence!
@@ -133,48 +112,60 @@ const Home = () => {
 
       {/* section 2 starts here *************/}
 
-      <div className="bg-slate-950 min-h-[80vh] text-white font-sans p-8 md:p-16 relative overflow-hidden">
-        <ParticleBg />
-        <div className="relative z-10 max-w-4xl mx-auto" data-aos="fade-down">
-          <h1 className="text-4xl  font-bold mb-12 text-center md:text-left">
-            What We Do
-          </h1>
-          <div className="border-b border-white "></div>
-          <div className="space-y-0">
-            {services.map((service) => (
-              <div key={service.id} className="border-b border-white py-1 ">
-                <button
-                  className=" cursor-pointer w-full"
-                  onClick={() => toggleOpen(service.id)}
-                >
-                  <div className="flex justify-between items-center space-x-0">
-                    <img
-                      src={service.icon}
-                      alt="iconOne"
-                      className="w-11 h-11"
-                    />
+          <div className="bg-slate-950 h-[75vh] md:min-h-screen text-white font-sans p-8 md:p-16 relative overflow-hidden">
+      <ParticleBg />
+      <div
+      data-aos="fade-down"
+       className="relative z-10 max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold mb-12 text-center md:text-left">
+          What We Do
+        </h1>
+        <div className="border-b border-white"></div>
+        <div className="space-y-0">
+          {services.map((service) => (
+            <div 
+            
+            key={service.id} 
+            className="py-2 border-b border-white last:border-b-1">
+              <button
+                className="cursor-pointer w-full text-left"
+                onClick={() => toggleOpen(service.id)}
+              >
+                <div
+                
+                 className="flex justify-between items-center space-x-4">
+                  <img
+                    src={service.icon}
+                    alt={`${service.title} icon`}
+                    className="w-10 h-10 "
+                  />
+                  <h2 className="text-[16px] mx-auto text-left md:text-2xl font-bold md:w-78">
+                    {service.title}
+                  </h2>
+                  <LucideArrowDown
+                    className={`w-5 h-5 stroke-[5px] text-white`}
+                  />
+                </div>
+              </button>
 
-                    <h2 className="text-[16px]  mx-auto text-left  md:text-2xl font-bold md:w-78">
-                      {service.title}
-                    </h2>
-
-                    <LucideArrowDown
-                      className={`w-6 h-6  transform transition-transform duration-300 ${
-                        openServiceId === service.id ? "rotate-180" : "rotate-0"
-                      }`}
-                    />
-                  </div>
-                </button>
-                {openServiceId === service.id && (
-                  <p className="mt-4 text-white text-justify transition-all duration-500 ease-in-out  font-semibold text-[18px] px-2 ">
-                    {service.description}
-                  </p>
-                )}
+              <div
+                className={`
+                  transition-all duration-1500  overflow-hidden
+                  ${openServiceId === service.id
+                    ? 'max-h-96 ' // Visible state
+                    : 'max-h-0 ' // Hidden state
+                  }
+                `}
+              >
+                <p className="text-gray-200 tracking-tight text-justify text-[15px] px-2 font-semibold">
+                  {service.description}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
+    </div>
 
       {/* section 3 starts here *************/}
 

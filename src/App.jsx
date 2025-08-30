@@ -20,7 +20,7 @@ const App = () => {
   
   return (
       <>
-       <div className={`${isLoading ? 'flex': 'hidden'}   items-center justify-center absolute top-40 opacity-90 z-50 w-full  h-[75vh] bg-[#000000]`}>
+       <div className={`${isLoading ? 'flex': 'hidden'}   items-center justify-center absolute top-0 opacity-90 z-50 w-full  h-screen bg-[#000000]`}>
           <img src={assets.logo} alt="Logo" className={`${isLoading ? 'flex': 'hidden'} w-32`} />
         </div>
     <Header />

@@ -178,8 +178,9 @@ const Services = () => {
     },
   };
   return (
-    <div className="bg-[#000222]">
+    <div className="bg-[#000222] mt-[-180px]">
       {/* section 1 starts here */}
+      <div className="md:h-[35vh] h-[20vh]"></div>
       <div className="md:min-h-[55vh] w-screen md:w-[860px] mx-auto text-white flex items-center md:items-start justify-center p-8 md:p-0 font-sans">
         <div className=" w-full ">
           {/* Main Heading Section */}

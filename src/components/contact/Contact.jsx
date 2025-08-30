@@ -15,7 +15,7 @@ const Contact = () => {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundBlendMode:'screen',
-    height: '80vh',
+    height: '110vh',
   };
   // Handle input changes
   const handleChange = (e) => {
@@ -42,15 +42,16 @@ const Contact = () => {
   return (
     <>
       {/* The form container*/}
-      <div id="contact" style={backgroundStyle}  className={`w-full overflow-hidden px-4 md:p-15 md:px-25 bg-[#000222] text-white shadow-xl backdrop-blur-sm bg-opacity-50`}>
+      <div id="contact" style={backgroundStyle}  className={`w-full mt-[-180px] overflow-hidden px-4 md:py-20 md:px-25 bg-[#000222] text-white shadow-xl backdrop-blur-sm bg-opacity-50`}>
         {/* Page Title */}
+        <div className="h-[25vh]"></div>
         <div className="w-screen md:w-[860px] mx-auto">
         <h1 className="text-xl md:text-7xl font-bold mb-12  text-left">
           Get In Touch
         </h1>
 
         {/* The form element */}
-        <form onSubmit={handleSubmit} className="space-y-8  w-full md:w-[70%]">
+        <form onSubmit={handleSubmit} className="space-y-8 mt-20 w-full md:w-[70%]">
           {/* Input fields section*/}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Name Field */}

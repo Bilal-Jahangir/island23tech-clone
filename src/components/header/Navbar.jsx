@@ -13,8 +13,8 @@ const Navbar = ({showNav,setShowNav}) => {
       height: '100vh',
     };
   return (
-    <div style={backgroundStyle} className=" fixed z-50 inset-y-45  flex flex-col md:flex-row bg-[#000222] items-start  overflow-hidden w-full h-screen mx-auto font-sans text-white">
-      <div className="hidden md:flex flex-col  p-8 md:px-12 md:py-20 space-y-7 md:w-[600px] w-full items-start bg-opacity-20 text-white">
+    <div style={backgroundStyle} className=" z-50 inset-y-0  flex flex-col md:flex-row bg-[#000222] items-start md:items-center  overflow-hidden w-full min-h-[130vh] mx-auto font-sans text-white">
+      <div className="md:min-h-[300px]  hidden md:flex flex-col  p-8 md:px-16 md:py-0  space-y-7 md:w-[600px] w-full items-start bg-opacity-20 text-white">
         <h2 className="text-2xl font-bold">Contact Us</h2>
         <p className="text-xl">Calgary, Ab</p>
         <p className="text-xl">island23tech@gmail.com</p>
@@ -26,7 +26,7 @@ const Navbar = ({showNav,setShowNav}) => {
         </div>
       </div>
       <div className='hidden md:block h-[400px] w-[2px] bg-blue-400'></div>
-      <div className=" flex-1 flex w-full items-start md:items-center justify-between p-8 md:p-16 ">
+      <div className="md:min-h-[300px] flex-1 mt-[100px] md:mt-0 flex w-full items-start  justify-between p-8 md:px-16 md:py-0">
           <nav className='w-full'>
         <ul>
           <li 

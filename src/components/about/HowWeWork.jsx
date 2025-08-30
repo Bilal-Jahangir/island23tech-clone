@@ -106,7 +106,7 @@ const HowWeWork = () => {
     { features: "Quick Start", fixedPrice: "no", timeAndMaterials: "yes" },
   ];
   return (
-    <div className="bg-[#000222] ">
+    <div className="bg-[#000222] mt-[-180px]">
       {/* section 1 */}
       <div
         style={backgroundStyle}
@@ -114,7 +114,7 @@ const HowWeWork = () => {
       >
         {/* Content Container (Text and Button) */}
         {/* Main Title */}
-        <div className="w-[860px] flex justify-center md:justify-start">
+        <div className="w-[860px] flex justify-center mt-10 md:justify-start">
           <h1 className="text-white font-bold text-[28px] md:text-[54px] leading-tight md:leading-15  drop-shadow-md tracking-tighter">
             <p> Discover the Power of </p>
             <p>Innovation</p>
@@ -151,7 +151,7 @@ const HowWeWork = () => {
           </div>
 
           {/* Right Side: Title and Packages */}
-          <div className="md:w-[50%] ">
+          <div className="md:w-[60%] ">
             <h2 className="text-[18px] px-6 md:px-4 font-bold mb-6 text-[#008bff]">
               {tabContent[activeTab].heading}
             </h2>
@@ -201,13 +201,34 @@ const HowWeWork = () => {
                     </h2>
                   </div>
                   <LucideArrowDown
-                    className={`w-4 md:w-6 h-4 md:h-6 transform transition-transform text-white   duration-300 ${
-                      openServiceId === service.id ? "rotate-180" : "rotate-0"
-                    }`}
+                    className={`w-5 h-5 stroke-[5px] text-white`}
                   />
                 </button>
-                {openServiceId === service.id && (
-                  <div>
+                <div
+                className={`
+                  transition-all duration-1500  overflow-hidden
+                  ${openServiceId === service.id
+                    ? 'max-h-96 ' // Visible state
+                    : 'max-h-0 ' // Hidden state
+                  }
+                `}
+              >
+                <p className="text-gray-200 text-justify text-[15px] px-2 font-semibold">
+                  {service.description}
+                </p>
+                {service.list.map((item) => (
+                      <ul className=" flex justify-center text-white text-[14px]">
+                        <li className="list-disc w-[80%]  md:w-[90%] pt-5">
+                          {item}
+                        </li>
+                      </ul>
+                    ))}
+              </div>
+            </div>
+          ))}
+                {/* {openServiceId === service.id && (
+                  <div
+                  >
                     <p className="mt-2 mb-5 text-white w-[90%] md:w-full text-justify  text-[14px]  transition-all duration-300 ease-in-out">
                       {service.description}
                     </p>
@@ -221,7 +242,7 @@ const HowWeWork = () => {
                   </div>
                 )}
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
